@@ -23,8 +23,8 @@ public class GondolatOlvasoKartyatrukk {
         String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
 
         int db = 1;
-        for (int sz = 0; sz < szinek.length; sz++) {
-            for (int e = 0; db < MERET && e < ertekek.length; e++) {
+        for (int sz = 0;sz < szinek.length; sz++) {
+            for (int e = 0;db < MERET && e < ertekek.length; e++) {
                 pakli[db++] = szinek[sz] + "_" + ertekek[e];
             }
         }
@@ -32,7 +32,7 @@ public class GondolatOlvasoKartyatrukk {
     
     private static void kirak() {
         for (int i = 1; i < pakli.length; i++) {
-            System.out.print(pakli[i] + " ");
+            System.out.printf("%-7s", pakli[i]);
             if(i % 3 == 0){
                 System.out.println("");
             }
