@@ -5,9 +5,11 @@ import java.util.Scanner;
 public class GondolatOlvasoKartyatrukk {
 
     static Scanner sc = new Scanner(System.in);
-    static String[] pakli = new String[22];
+    static final int MERET = 22;
+    static String[] pakli = new String[MERET];
     
     public static void main(String[] args) {
+        feltolt();
         for (int i = 0; i < 3; i++) {
             kirak();
             melyik();
@@ -16,11 +18,19 @@ public class GondolatOlvasoKartyatrukk {
         ezVolt();
     }
 
-    private static void kirak() {
-        for (int i = 1; i < pakli.length; i++) {
-            pakli[i] = "Lap_" + i;
+    private static void feltolt() {
+        String[] szinek = {"P", "T", "Z", "M"};
+        String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+
+        int db = 1;
+        for (int sz = 0; sz < szinek.length; sz++) {
+            for (int e = 0; db < MERET && e < ertekek.length; e++) {
+                pakli[db++] = szinek[sz] + "_" + ertekek[e];
+            }
         }
-        
+    }
+    
+    private static void kirak() {
         for (int i = 1; i < pakli.length; i++) {
             System.out.print(pakli[i] + " ");
             if(i % 3 == 0){
