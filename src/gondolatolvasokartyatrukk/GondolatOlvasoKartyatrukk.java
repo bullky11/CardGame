@@ -40,8 +40,12 @@ public class GondolatOlvasoKartyatrukk {
     }
 
     private static void melyik() {
-        System.out.print("melyik oszlop (1-3): ");
-        int oszlop = Integer.parseInt(sc.nextLine());
+        boolean jo;
+        do{
+            System.out.print("melyik oszlop (1-3): ");
+            int oszlop = Integer.parseInt(sc.nextLine());
+            jo = oszlop >= 1 && oszlop <= 3;
+        }while(!jo);
     }
 
     private static void kever() {
