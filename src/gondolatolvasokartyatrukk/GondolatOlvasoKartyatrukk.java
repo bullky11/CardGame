@@ -1,7 +1,10 @@
 package gondolatolvasokartyatrukk;
 
+import java.util.Scanner;
+
 public class GondolatOlvasoKartyatrukk {
 
+    static Scanner sc = new Scanner(System.in);
     static String[] pakli = new String[22];
     
     public static void main(String[] args) {
@@ -14,19 +17,29 @@ public class GondolatOlvasoKartyatrukk {
     }
 
     private static void kirak() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        for (int i = 1; i < pakli.length; i++) {
+            pakli[i] = "Lap_" + i;
+        }
+        
+        for (int i = 1; i < pakli.length; i++) {
+            System.out.print(pakli[i] + " ");
+            if(i % 3 == 0){
+                System.out.println("");
+            }
+        }
     }
 
     private static void melyik() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.print("melyik oszlop (1-3): ");
+        int oszlop = Integer.parseInt(sc.nextLine());
     }
 
     private static void kever() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        //a választott oszlop középre kerüljön
     }
 
     private static void ezVolt() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("A gondolt lap: " + pakli[11]);
     }
     
 }
