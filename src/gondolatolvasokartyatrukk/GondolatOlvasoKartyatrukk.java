@@ -52,15 +52,17 @@ public class GondolatOlvasoKartyatrukk {
     }
 
     private static void kever(int oszlop) {
-        int[] ujPakli = new int[22];
+        String[] uj = new String[MERET];
         switch(oszlop){
             case (1):;
-            case (2):
-                for (int i = 0; i < 10; i++) {
+            case (2):;
+            case (3):for (int i = 1; i < 7; i++) {
+                uj[i] =pakli[21-(i-3)*3];
+                uj[i+7]=pakli[19-(i-1)*3];
+                uj[i+14]=pakli[20-(i-1)*3];
                     
                 }
 ;
-            case (3):;
         }
     }
 
