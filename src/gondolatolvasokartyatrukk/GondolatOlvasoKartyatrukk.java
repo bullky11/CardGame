@@ -3,7 +3,7 @@ package gondolatolvasokartyatrukk;
 import java.util.Scanner;
 
 public class GondolatOlvasoKartyatrukk {
-
+///
     static Scanner sc = new Scanner(System.in);
     static final int MERET = 22;
     static String[] pakli = new String[MERET];
