@@ -46,10 +46,11 @@ public class GondolatOlvasoKartyatrukk {
             int oszlop = Integer.parseInt(sc.nextLine());
             jo = oszlop >= 1 && oszlop <= 3;
         }while(!jo);
+       
     }
 
-    private static void kever() {
-        //a választott oszlop középre kerüljön
+    private static void kever(int oszlop) {
+
     }
 
     private static void ezVolt() {
