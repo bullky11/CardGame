@@ -13,7 +13,7 @@ public class GondolatOlvasoKartyatrukk {
         for (int i = 0; i < 3; i++) {
             kirak();
             melyik();     
-            kever();
+            kever(melyik());
         }
         ezVolt();
     }
@@ -52,7 +52,16 @@ public class GondolatOlvasoKartyatrukk {
     }
 
     private static void kever(int oszlop) {
-        System.out.println("XXXXXXXXXXXXXXXX"+oszlop);
+        int[] ujPakli = new int[22];
+        switch(oszlop){
+            case (1):;
+            case (2):
+                for (int i = 0; i < 10; i++) {
+                    
+                }
+;
+            case (3):;
+        }
     }
 
     private static void ezVolt() {
